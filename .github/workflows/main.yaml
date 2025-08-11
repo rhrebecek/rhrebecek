@@ -13,4 +13,66 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          config_presets: ../config/metrics-schema.yaml
+          config_timezone: Europe/Prague
+          template: classic
+          filename: github-metrics.svg
+          base: header, activity, community, repositories, metadata
+
+          # 🔹 Statistics languages
+          plugin_languages: yes
+          plugin_languages_categories: programming
+          plugin_languages_recent_days: 14
+          plugin_languages_recent_load: 300
+          plugin_languages_limit: 8
+          plugin_languages_skipped: html, css, scss, json
+
+          # 🔹 Stars repo
+          plugin_stars: yes
+          plugin_stars_limit: 8
+
+          # 🔹 Achievements
+          plugin_achievements: yes
+          plugin_achievements_only: polyglot, stargazer, maintainer, developer, explorer
+          plugin_achievements_display: detailed
+          plugin_achievements_threshold: C
+
+          # 🔹 Commits stats
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+
+          # 🔹 Calendar commits
+          plugin_calendar: yes
+          plugin_calendar_limit: 1
+
+          # 🔹 Follow-up na issue a PR
+          plugin_followup: yes
+          plugin_followup_sections: repositories
+
+          # 🔹 Contributors
+          plugin_contributors: yes
+          plugin_contributors_contributions: yes
+
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          extras_css: |
+            .field svg {
+              fill: #F0C415;
+            }
+            .field {
+              color: #A01C37;
+            }
+            h1, h2, h3 {
+              color: #A01C37 !important;
+            }
+          extras_js: |
+            for (const {a, b} of [
+              {a:"#216e39", b:"#820711"},
+              {a:"#30a14e", b:"#e53228"},
+              {a:"#40c463", b:"#fb7252"},
+              {a:"#9be9a8", b:"#fcaf93"},
+              {a:"#ebedf0", b:"#fee2d5"},
+            ])
+            document.querySelectorAll(`svg g [fill="${a}"]`).forEach(node => node.setAttribute("fill", b))
