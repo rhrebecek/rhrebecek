@@ -26,16 +26,6 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_skipped: html, css, scss, json
 
-          # 🔹 Stars repo
-          plugin_stars: yes
-          plugin_stars_limit: 8
-
-          # 🔹 Achievements
-          plugin_achievements: yes
-          plugin_achievements_only: polyglot, stargazer, maintainer, developer, explorer
-          plugin_achievements_display: detailed
-          plugin_achievements_threshold: C
-
           # 🔹 Commits stats
           plugin_habits: yes
           plugin_habits_from: 200
@@ -57,22 +47,3 @@ jobs:
 
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-          extras_css: |
-            .field svg {
-              fill: #F0C415;
-            }
-            .field {
-              color: #A01C37;
-            }
-            h1, h2, h3 {
-              color: #A01C37 !important;
-            }
-          extras_js: |
-            for (const {a, b} of [
-              {a:"#216e39", b:"#820711"},
-              {a:"#30a14e", b:"#e53228"},
-              {a:"#40c463", b:"#fb7252"},
-              {a:"#9be9a8", b:"#fcaf93"},
-              {a:"#ebedf0", b:"#fee2d5"},
-            ])
-            document.querySelectorAll(`svg g [fill="${a}"]`).forEach(node => node.setAttribute("fill", b))
