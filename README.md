@@ -19,7 +19,3 @@ I am a software developer with a focus on web and mobile applications. I love to
 ## 📊 Main GitHub Metrics
 
 ![Metrics](./github-metrics.svg)
-
-## 📈 Others Stats
-
-![Radek's GitHub stats](https://github-readme-stats.vercel.app/api?username=rhrebecek&show_icons=true&theme=transparent)
