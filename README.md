@@ -1,6 +1,6 @@
 # Hi, I am Radek 👋
 
-<iframe src="https://github.com/sponsors/rhrebecek/button" title="Sponsor rhrebecek" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
+[![Sponsor on GitHub](https://img.shields.io/badge/Sponsor_me-GitHub_Sponsors-ea4aaa?style=for-the-badge&logo=github-sponsors)](https://github.com/sponsors/rhrebecek)
 
 I am a software developer with a focus on web and mobile applications. I love to tinker with details and find clever solutions.
 
